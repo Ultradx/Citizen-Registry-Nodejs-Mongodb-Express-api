@@ -1,0 +1,114 @@
+.lesson{
+    width:70%;
+    margin:auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height:105px;
+    padding: 10px;
+    text-align: left;
+    font-size:15px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.create{
+    background-color: #fc922f;
+    border: none;
+    font-size: 17px;
+    color:#fff;
+    border-radius: 7px;
+    padding: 4px 10px;
+  }
+.create:hover{
+    background-color: #c77a23;
+}
+.create:active{
+    background-color: #975e1d;
+}
+
+.a{
+    margin:0;
+    font-size: 22px;
+    margin-bottom:10px;
+    color:#2f89fc;
+}
+
+#main {
+    padding-top: 40px;
+}
+
+
+
+.main-container {
+    margin: 4% 20%;
+}
+
+.editbtn{
+    margin:0px 15px;
+    background-color: #2f89fc;
+    border: 1px solid #236ac7;
+    font-size: 15px;
+    float: right;
+    color:#fff;
+    border-radius: 7px;
+    padding: 2px 6px;
+  }
+.editbtn:hover{
+    background-color: #236ac7;
+}
+.editbtn:active{
+    background-color: #1d5297;
+}
+
+.deletebtn{
+    margin-right:40px;
+    background-color: #fc2f2f;
+    border: 1px solid #c22e2e;
+    float: right;
+    font-size: 15px;
+    color:#fff;
+    border-radius: 7px;
+    padding: 2px 6px;
+  }
+.deletebtn:hover{
+    background-color: #d32626;
+}
+.deletebtn:active{
+    background-color: #9e1d1d;
+}
+
+.selectbtn{
+    margin:0px 15px;
+    background-color: #3ebd2d;
+    border: 1px solid #3ebd2d;
+    float: right;
+    font-size: 17px;
+    color:#fff;
+    border-radius: 7px;
+    padding: 2px 10px;
+  }
+.selectbtn:hover{
+    background-color: #3ec723;
+}
+.selectbtn:active{
+    background-color: #21971d;
+}
+
+.backbtn{
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    background-color: #fff;
+    border: 1px solid #2f89fc;
+    font-size: 15px;
+    color:#2f89fc;
+    border-radius: 20px;
+    padding: 5px 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .backbtn:hover{
+    background-color: rgb(236, 236, 236);
+  }
+  .backbtn:active{
+    background-color: rgb(221, 221, 221);
+  }

@@ -1,0 +1,76 @@
+[{
+    "_id": {
+      "$oid": "62054b10cf3222a30bd87066"
+    },
+    "at": "at324561",
+    "name": "Test",
+    "surname": "test",
+    "sex": "male",
+    "birthYear": {
+      "$date": "2022-02-23T00:00:00Z"
+    },
+    "afm": 123456789,
+    "amka": null,
+    "location": "",
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62054b33cf3222a30bd8706b"
+    },
+    "at": "AT347563",
+    "name": "Aldo1",
+    "surname": "seitlli",
+    "sex": "male",
+    "birthYear": {
+      "$date": "2022-01-31T00:00:00Z"
+    },
+    "afm": 123456555,
+    "amka": null,
+    "location": "",
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62054b51cf3222a30bd87075"
+    },
+    "at": "as454456",
+    "name": "asfddgs",
+    "surname": "asdgsdfg",
+    "sex": "female",
+    "birthYear": {
+      "$date": "2022-01-31T00:00:00Z"
+    },
+    "afm": 548796521,
+    "amka": null,
+    "location": "",
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62054b63cf3222a30bd8707a"
+    },
+    "at": "as123456",
+    "name": "asdfsd",
+    "surname": "safsaf",
+    "sex": "male",
+    "birthYear": {
+      "$date": "2022-02-01T00:00:00Z"
+    },
+    "afm": null,
+    "amka": null,
+    "location": "",
+    "__v": 0
+  },{
+    "_id": {
+      "$oid": "62054e59779dc6f357079904"
+    },
+    "at": "as123451",
+    "name": "Esmerald",
+    "surname": "Seitlli",
+    "sex": "male",
+    "birthYear": {
+      "$date": "2022-02-11T00:00:00Z"
+    },
+    "afm": null,
+    "amka": null,
+    "location": "",
+    "__v": 0
+  }]

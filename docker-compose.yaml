@@ -1,0 +1,41 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  citizen_registry:
+    container_name: citizen_registry
+    image: ultradx/citizen_api_project
+    environment:
+        NODE_ENV: production
+    ports:
+      - "3000:3000"    
+    volumes:
+      - .:/code
+      - logvolume01:/var/log      
+    links:
+      - mongodb
+    networks:
+      - back-end
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - data:/data/db
+    networks:
+      - back-end
+    
+  mongo_seed:
+    image: mongo:latest
+    links:
+        - mongodb
+    volumes:
+        - data:/data/db
+    command:
+        /mongo-seed/import.sh
+
+networks:
+    back-end:
+
+volumes:
+    logvolume01: {}
+    data: {}

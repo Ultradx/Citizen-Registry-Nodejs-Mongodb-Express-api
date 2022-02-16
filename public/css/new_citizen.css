@@ -1,0 +1,126 @@
+/* html{
+    background: url(../assets/images/dragos-gontariu-K44CTT35osc-unsplash.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} */
+
+.register_form{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    border-radius: 8px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.171) 0px 3px 8px;
+    padding-bottom: 20px;
+}
+
+.input{
+    display: block;
+    margin: auto;
+    margin-top: 13px;
+    border: none;
+    outline: none;
+    background-color: #e3e3e6;
+    width: 240px;
+    height: 35px;
+    border-radius: 20px;
+    padding: 10px 20px;
+  }
+  .input:hover{
+    box-shadow: 0 0 1.5pt 0.1pt #8cbaf7;
+  }
+  .input:focus {
+    box-shadow: 0 0 1.5pt 0.5pt #2f89fc;
+    outline-width: 0px;
+  }
+.input1{
+  width: 540px;
+}
+
+.input2{
+  width: 540px;
+  height: 250px;
+  resize: none;
+}
+
+textarea::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 5px;
+  z-index: 1;
+  height: 100px;
+  background-color: transparent ; 
+}
+
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #4285F4; 
+}
+
+textarea::-webkit-scrollbar-track-piece:start {
+    margin-top: 15px; 
+}
+textarea::-webkit-scrollbar-track-piece:end {
+  margin-bottom: 15px; 
+}
+
+
+  .submitbtn{
+    display: block;
+    margin: auto;
+    margin-top: 0px;
+    background-color: #2f89fc;
+    border: none;
+    font-size: 15px;
+    color:#fff;
+    border-radius: 20px;
+    padding: 5px 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .submitbtn:hover{
+    background-color: #236ac7;
+  }
+  .submitbtn:active{
+    background-color: #1d5297;
+  }
+
+  .cancelbtn{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #fff;
+    border: 1px solid #2f89fc;
+    font-size: 15px;
+    color:#2f89fc;
+    border-radius: 20px;
+    padding: 5px 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .cancelbtn:hover{
+    background-color: rgb(236, 236, 236);
+  }
+  .cancelbtn:active{
+    background-color: rgb(221, 221, 221);
+  }
+
+  .custom_select{
+    background-color: #2f89fc ;
+    color: white;
+    border: none;
+    outline:none;
+    border-radius: 5px;
+    margin-top: 13px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .custom_select:hover{
+    background-color: #236ac7;
+  }
+  .custom_select option{
+    background-color: #fff;
+    color: black;
+  }

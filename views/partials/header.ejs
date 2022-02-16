@@ -1,0 +1,36 @@
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Citizen Registry Management</a>
+            </div>
+            <ul class="nav navbar-nav"> 
+                <li <% if(active_link == 1) { %> class="active" <% } %> ><a href="/">Home</a></li>
+                <li <% if(active_link == 2) { %> class="active" <% } %>><a href="/citizens/new_citizen">New Citizen</a></li>
+                <li <% if(active_link == 3) { %> class="active" <% } %>><a href="/citizens/find_citizen">Search Citizen</a></li>
+                <li <% if(active_link == 4) { %> class="active" <% } %>><a href="/citizens/delete_citizen">Delete Citizen</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- <div class="tabs-to-dropdown">
+        <div class="nav-wrapper d-flex align-items-center justify-content-between">
+            <ul class="nav nav-pills d-none d-md-flex" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="pills-company-tab" data-toggle="pill" href="#pills-company"
+                        role="tab" aria-controls="pills-company" aria-selected="true">Company</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-product-tab" data-toggle="pill" href="#pills-product" role="tab"
+                        aria-controls="pills-product" aria-selected="false">Product</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-news-tab" data-toggle="pill" href="#pills-news" role="tab"
+                        aria-controls="pills-news" aria-selected="false">News</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                        aria-controls="pills-contact" aria-selected="false">Contact</a>
+                </li>
+            </ul>
+        </div> -->
+</header>

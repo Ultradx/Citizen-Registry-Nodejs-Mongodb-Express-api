@@ -1,0 +1,7 @@
+<% citizens.forEach(citizen => { %>
+<div class="lesson">
+  <a class="a" href="/citizens/find_citizen/<%= citizen.id %>"><%= citizen.name %> <%= citizen.surname %></a>
+  <p>AT: <%= citizen.at %> || AFM: <%= citizen.afm %></p>
+  <p>AMKA: <%= citizen.amka %> || Location: <%= citizen.location %></p>
+</div>
+<% }) %>

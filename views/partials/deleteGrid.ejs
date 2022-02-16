@@ -1,0 +1,15 @@
+<% citizens.forEach(citizen => { %>
+<div class="lesson">
+  <a class="a" href="/citizens/find_citizen/<%= citizen.id %>"><%= citizen.name %> <%= citizen.surname %></a>
+  <p>AT: <%= citizen.at %> || AFM: <%= citizen.afm %></p>
+  <p>AMKA: <%= citizen.amka %> || Location: <%= citizen.location %></p>
+  <form method="POST" style=" 
+      position: relative;
+      left: 90%;
+      bottom: 80%;
+      transform: translate(-10%);" action="/citizens/delete_citizen/<%= citizen.id %>?_method=DELETE">
+    <button type="submit" type="button" class="btn btn-danger">DELETE</button>
+  </form>
+
+</div>
+<% }) %>

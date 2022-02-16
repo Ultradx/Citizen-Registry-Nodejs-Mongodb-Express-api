@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Citizen Registry Management</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/lesson.css">
+    <!-- <script src="/js/nav.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs',{active_link: 3}) %>
+    <div class="container">
+        <h3>Find Citizen/s</h3>
+
+        <!-- To searchbar -->
+        <form class="row g-3 needs-validation" action="/citizens/find_citizen" method="GET">
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="validationCustom01" class="form-label">AT</label>
+                    <input type="text" class="form-control" id="at" name="at" value="<%= searchOptions.at %>" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="validationCustom01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="name" name="name"
+                        value="<%= searchOptions.name %>" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="validationCustom01" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="surname" name="surname"
+                        value="<%= searchOptions.surname %>" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="validationCustom01" class="form-label">AFM</label>
+                    <input type="text" class="form-control" id="afm" name="afm" value="<%= searchOptions.afm %>" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="validationCustom01" class="form-label">AMKA</label>
+                    <input type="text" class="form-control" id="amka" name="amka" value="<%= searchOptions.amka %>" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-outline">
+                    <label for="validationCustom01" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="location" name="location"
+                        value="<%= searchOptions.location %>" />
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </form>
+
+        <!-- Περιεχομενα του index -->
+        <div id="main" style="text-align:center;">
+            <div id="load_lessons">
+                <%- include('../partials/updateGrid', { citizens: citizens, large: true }) %>
+            </div>
+            <div id="load_message"></div>
+        </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

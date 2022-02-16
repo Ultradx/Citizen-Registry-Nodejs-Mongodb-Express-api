@@ -1,0 +1,12 @@
+<% citizens.forEach(citizen => { %>
+    <div class="lesson">
+      <a class="a" href="/citizens/find_citizen/<%= citizen.id %>"><%= citizen.name %> <%= citizen.surname %></a>
+      <p>AT: <%= citizen.at %> || AFM: <%= citizen.afm %></p>
+      <p>AMKA: <%= citizen.amka %> || Location: <%= citizen.location %></p>
+      <a href="/citizens/find_citizen/<%= citizen.id %>" type="button" style=" 
+        position: relative;
+        left: 90%;
+        bottom: 80%;
+        transform: translate(-90%);" type="button" class="btn btn-success">More</a>
+    </div>
+    <% }) %>

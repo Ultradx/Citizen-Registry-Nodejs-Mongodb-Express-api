@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Welcome</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- <script src="../js/my_js.js" type="text/javascript"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/new_citizen.css">
+
+</head>
+
+<body>
+    <%- include('../partials/header.ejs', {active_link: 3}) %>
+    <div class="container">
+        <div>
+            <form class="register_form" id="register_form" action="/citizens/find_citizen/<%= citizen.id %>?_method=PATCH" method="POST">
+                <h2 style="padding-bottom:50px; padding-top:20px;"><b>Update Citizen</b></h2>
+                <input style="display:none;" name="form" value="citizen">
+                <input class="input" id="at" name="at" placeholder="AT" type="at" value="<%= citizen.at%>" readonly>
+                <input class="input" id="firstname" name="firstname" placeholder="First Name" type="firstname"value="<%= citizen.name%>" readonly>
+                <input class="input" id="lastname" name="lastname" placeholder="Last Name" type="lastname"value="<%= citizen.surname%>" readonly>
+                <input class="input" id="gender" name="gender" placeholder="Gender" type="gender"value="<%= citizen.sex%>" readonly>
+                <input class="input" id="birth_date" name="birth_date" placeholder="Birth Date" type="date" value="<%= citizen.birthYear == null ? '' : citizen.birthYear.toISOString().split('T')[0] %>" readonly>
+                <input class="input" id="afm" name="afm" placeholder="AFM" type="afm" <% if(citizen.afm != undefined) {%> value="<%= citizen.afm%>" readonly<% } %> >
+                <input class="input" id="amka" name="amka" placeholder="AMKA" type="amka"value="<%= citizen.amka%>" >
+                <input class="input" id="location" name="location" placeholder="Location" type="location"value="<%= citizen.location%>">
+                <p style="color: red; font-size: 13px; padding-top:10px;" id="error">&nbsp;</p>
+                <button name="submit" class="submitbtn" type="submit">Update</button>
+                <a href="/"><button name="cancel" class="cancelbtn" type="button">Cancel</button></a>
+            </form>
+        </div>
+    </div>
+
+    <!-- <script>
+    $("#register_form").submit(function(e) {
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        var form = $(this);
+        var url = "register.php";
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(), // serializes the form's elements
+            success: function(data)
+            {
+                $("#error").css('color', 'red');
+                $("#error").text("");
+                if(data.includes("6")){
+                    $("#error").text("Please enter a name");
+                }else if(data.includes("7")){
+                    $("#error").text("Please enter a surname");
+                }else if(data.includes("5")){
+                    $("#error").text("Please enter a AM");
+                }else if(data.includes("8")){
+                    $("#error").text("Please enter a year");
+                }else if(data.includes("1")){
+                    $("#error").text("Please enter a username");
+                }else if(data.includes("2")){
+                    $("#error").text("This username is already taken");
+                }else if(data.includes("3")){
+                    $("#error").text("Please enter a password");
+                }else if(data.includes("4")){
+                    $("#error").text("Password must have atleast 6 characters");
+                }else if(data.includes("b")){
+                    $("#error").text("Please confirm password");
+                }else if(data.includes("c")){
+                    $("#error").text("Password did not match");
+                }else if(data.includes("a")){
+                    $("#error").text("Please enter a email");
+                }else if(data.includes("9")){
+                    $("#error").text("Please enter a phone number");
+                }else{
+                    $("#error").css('color', 'green');
+                    $("#error").text("Your request has been sent");
+                    $("#firstname").val("");
+                    $("#lastname").val("");
+                    $("#am").val("");
+                    $("#year").val("");
+                    $("#username").val("");
+                    $("#password").val("");
+                    $("#confirm_password").val("");
+                    $("#email").val("");
+                    $("#number").val("");
+                }
+            }
+            });
+    });
+</script> -->
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #32373d; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #adafb1;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    display: block;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #2f89fc;
+  }
+
+  .slider{
+    padding: 8px 8px 8px 8px;
+  }
+  
+  .slidebtn{
+    position:fixed;
+    width: 30px;
+    display: inline-block;
+    transition: 0.5s;
+  }
+
+  .slidebtn a:hover {
+    background-color: #1660c0;
+  }
+
+  .slidebtn a:active {
+    background-color: #1556ac;
+  }
+  .slidebtn a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    padding: 4px;
+    padding-bottom: 2px;
+    border-radius: 10%;
+    text-align: center;
+    vertical-align:middle;
+    background-color: #2f89fc;
+    width: 30px;
+    height: 30px;
+  }
+
+  .searchbar{
+    position:relative;
+    transition: margin-left .5s;
+    left: 55%;
+    transform: translate(-55%);
+    padding: 10px;
+    width: 40vw;
+  }
+  .searchbar ::placeholder {
+    color: rgb(170, 169, 169);
+  }
+
+  form.search input[type=text] {
+    float: left;
+    width: 80%;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  form.search button {
+    float: left;
+    max-width: 40px;
+    width: 20%;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+  }
+
+  .background {
+    top: 0;
+    width: 100%; /* width of container */
+    height: 170px; /* height of container */
+    object-fit: cover;
+    margin-top: -60px;
+    filter: brightness(70%);
+  }
+  .buttonEdit{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    object-fit: cover;
+    width: 90.1px;
+    height: 90.1px;
+    background-color: black;
+    color: #ffffff;
+    border-radius: 50%;
+    opacity: 0.5;
+    border:none;
+    display: none;
+  }
+
+  .buttonEdit:active {
+    opacity: 0.6;
+  }
+
+  .profile {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    object-fit: cover;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .images{
+    margin-left: -250px;
+  }
+  
+  .profile:hover + .buttonEdit {
+    cursor: default;
+    display: block;
+  }
+
+  .buttonEdit:hover{
+    display: block;
+  }
+
+  .name{
+    font-family: poppins,Arial,sans-serif;
+    white-space: nowrap;
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .select{
+    margin-left: -250px;
+  }
+
+  .blocker{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: black;
+    opacity: 0.5;
+    display: none;
+  }
+
+  .loginpopup{
+    position: absolute;
+    width: 320px;
+    height: 400px;
+    border-radius: 5%;
+    z-index: 2;
+    left: 50%;
+    top:20%;
+    transform: translateX(-50%);
+    background-color: white;
+    display: none;
+    margin-top:20px;
+    transition: 0.5s;
+  }
+
+  .loginiput{
+    display: block;
+    margin: auto;
+    margin-top: 13px;
+    border: none;
+    outline: none;
+    background-color: #e3e3e6;
+    width: 240px;
+    height: 35px;
+    border-radius: 20px;
+    padding: 0px 20px;
+  }
+
+  .loginiput:hover{
+    box-shadow: 0 0 1.5pt 0.1pt #8cbaf7;
+  }
+  .loginiput:focus {
+    box-shadow: 0 0 1.5pt 0.5pt #2f89fc;
+    outline-width: 0px;
+  }
+
+  .loginbtn{
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+    background-color: #2f89fc;
+    border: none;
+    font-size: 15px;
+    color:#fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .loginbtn:hover{
+    background-color: #236ac7;
+  }
+  .loginbtn:active{
+    background-color: #1d5297;
+  }
+
+  .weightinput{
+    margin: auto;
+    border: none;
+    outline: none;
+    background-color: #e3e3e6;
+    width: 80px;
+    height: 35px;
+    border-radius: 20px;
+    padding: 0px 10px;
+  }
+
+  .weightinput:hover{
+    box-shadow: 0 0 1.5pt 0.1pt #8cbaf7;
+  }
+  .weightinput:focus {
+    box-shadow: 0 0 1.5pt 0.5pt #2f89fc;
+    outline-width: 0px;
+  }
+
+  .loginform{
+    text-align: center;
+    padding: 10px 0px;
+  }
+
+  .logo{
+    width: 80px;
+    padding-top: 35px;
+    padding-bottom: 20px;
+  }
+  
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+
+  .box-container {
+    padding:0;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 50%;
+    height: 500px;
+    overflow-y: scroll;
+  }
+
+  .myLesson{
+    width:100%;
+    margin:0;
+    height:90px;
+    padding: 7px;
+    text-align: left;
+    font-size:13px;
+    border-bottom: rgb(218, 218, 218) solid 1px;
+}
+.a1{
+  margin:0;
+  font-size: 17px;
+  margin-bottom:10px;
+  color:#2f89fc;
+}
